@@ -61,6 +61,34 @@ function updateReadme() {
     
     const treeMap = generateTree(rootDir);
     const currentDate = new Date().toISOString().split('T')[0];
+    const baseUrl = 'https://cdn.jsdelivr.net/gh/miphira/static-files@main/';
+    
+    // Đảm bảo có phần CDN Base URL ở đầu file
+    if (!readmeContent.includes('## 🔗 CDN Base URL')) {
+        const headerSection = `# Static Files Repository
+
+## 🔗 CDN Base URL
+\`\`\`
+${baseUrl}
+\`\`\`
+
+## 📖 Cách sử dụng
+Để truy cập các file trong repository, sử dụng base URL kết hợp với đường dẫn file:
+
+**Ví dụ:**
+- Logo Miphira: \`${baseUrl}brand/logo/miphira-logo-text-full.svg\`
+- Font Roboto Regular: \`${baseUrl}font/roboto/static/Roboto-Regular.ttf\`
+- Logo Elsu: \`${baseUrl}elsu/logo/elsu.svg\`
+
+`;
+        // Thay thế nội dung từ đầu file đến section đầu tiên khác
+        const firstSectionMatch = readmeContent.match(/^(.*?)(?=\n## [^🔗])/s);
+        if (firstSectionMatch) {
+            readmeContent = readmeContent.replace(firstSectionMatch[1], headerSection);
+        } else {
+            readmeContent = headerSection + readmeContent;
+        }
+    }
     
     // Tìm và thay thế phần tree structure cũ hoặc thêm mới
     const treeSection = `\n## 📁 Project Structure\n\n*Last updated: ${currentDate}*\n\n\`\`\`\n${treeMap.trim()}\n\`\`\`\n`;
@@ -75,8 +103,9 @@ function updateReadme() {
     }
     
     fs.writeFileSync(readmePath, readmeContent);
-    console.log('✅ Tree map đã được cập nhật trong README.md');
+    console.log('✅ Tree map và CDN URL đã được cập nhật trong README.md');
     console.log(`📊 Tổng số files/folders: ${treeMap.split('\n').filter(line => line.trim()).length}`);
+    console.log(`🔗 Base URL: ${baseUrl}`);
 }
 
 // Chạy script

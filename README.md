@@ -1,4 +1,17 @@
-hello
+# Static Files Repository
+
+## 🔗 CDN Base URL
+```
+https://cdn.jsdelivr.net/gh/miphira/static-files@main/
+```
+
+## 📖 Cách sử dụng
+Để truy cập các file trong repository, sử dụng base URL kết hợp với đường dẫn file:
+
+**Ví dụ:**
+- Logo Miphira: `https://cdn.jsdelivr.net/gh/miphira/static-files@main/brand/logo/miphira-logo-text-full.svg`
+- Font Roboto Regular: `https://cdn.jsdelivr.net/gh/miphira/static-files@main/font/roboto/static/Roboto-Regular.ttf`
+- Logo Elsu: `https://cdn.jsdelivr.net/gh/miphira/static-files@main/elsu/logo/elsu.svg`
 ## 📁 Project Structure
 
 *Last updated: 2025-09-28*
@@ -74,5 +87,6 @@ brand/
 │       ├── Roboto-Italic-VariableFont_wdth,wght.ttf
 │       └── Roboto-VariableFont_wdth,wght.ttf
 ├── package.json
-└── README.md
+├── README.md
+└── TREE_GENERATOR.md
 ```

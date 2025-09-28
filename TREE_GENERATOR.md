@@ -31,6 +31,8 @@ node scripts/generate-tree.js
 
 - ✅ Tự động tạo cấu trúc thư mục dạng tree
 - ✅ Cập nhật tự động trong README.md
+- ✅ Tự động thêm CDN Base URL (jsDelivr)
+- ✅ Tạo ví dụ sử dụng CDN links
 - ✅ Bỏ qua các thư mục/file không cần thiết (node_modules, .git, etc.)
 - ✅ Sắp xếp thư mục trước, file sau
 - ✅ Hiển thị ngày cập nhật cuối cùng
