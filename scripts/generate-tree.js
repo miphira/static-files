@@ -61,7 +61,7 @@ function updateReadme() {
     
     const treeMap = generateTree(rootDir);
     const currentDate = new Date().toISOString().split('T')[0];
-    const baseUrl = 'https://cdn.jsdelivr.net/gh/miphira/static-files@main/';
+    const baseUrl = 'https://cdn.jsdelivr.net/gh/miphira/static-files@master/';
     
     // Đảm bảo có phần CDN Base URL ở đầu file
     if (!readmeContent.includes('## 🔗 CDN Base URL')) {

@@ -2,16 +2,16 @@
 
 ## 🔗 CDN Base URL
 ```
-https://cdn.jsdelivr.net/gh/miphira/static-files@main/
+https://cdn.jsdelivr.net/gh/miphira/static-files@master/
 ```
 
 ## 📖 Cách sử dụng
 Để truy cập các file trong repository, sử dụng base URL kết hợp với đường dẫn file:
 
 **Ví dụ:**
-- Logo Miphira: `https://cdn.jsdelivr.net/gh/miphira/static-files@main/brand/logo/miphira-logo-text-full.svg`
-- Font Roboto Regular: `https://cdn.jsdelivr.net/gh/miphira/static-files@main/font/roboto/static/Roboto-Regular.ttf`
-- Logo Elsu: `https://cdn.jsdelivr.net/gh/miphira/static-files@main/elsu/logo/elsu.svg`
+- Logo Miphira: `https://cdn.jsdelivr.net/gh/miphira/static-files@master/brand/logo/miphira-logo-text-full.svg`
+- Font Roboto Regular: `https://cdn.jsdelivr.net/gh/miphira/static-files@master/font/roboto/static/Roboto-Regular.ttf`
+- Logo Elsu: `https://cdn.jsdelivr.net/gh/miphira/static-files@master/elsu/logo/elsu.svg`
 ## 📁 Project Structure
 
 *Last updated: 2025-09-28*
