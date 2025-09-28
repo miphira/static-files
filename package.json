@@ -1,0 +1,13 @@
+{
+  "name": "static-files",
+  "version": "1.0.0",
+  "description": "Static files repository with auto-generated tree map",
+  "scripts": {
+    "tree": "node scripts/generate-tree.js",
+    "update-readme": "node scripts/generate-tree.js && echo Tree map updated in README.md"
+  },
+  "devDependencies": {},
+  "keywords": ["static", "assets", "fonts", "logos"],
+  "author": "",
+  "license": "MIT"
+}
